@@ -36,6 +36,9 @@ class BuildController extends Controller
     {
         echo "Start building PHAR package...\n";
 
+        // TODO
+        $this->module = \Yii::$app->getModule('phar');
+
         $this->loadConfiguration($configFile);
 
         $this->clean(false);
