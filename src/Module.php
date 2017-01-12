@@ -64,7 +64,7 @@ class Module extends \yii\base\Module
      *
      * @return string
      */
-    public function afterAction($action, &$result)
+    public function afterAction($action, $result)
     {
         $event = new ActionEvent($action, ['result' => $result]);
         $this->trigger(self::EVENT_AFTER_ACTION, $event);
